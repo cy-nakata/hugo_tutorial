@@ -1,0 +1,17 @@
+{{ partial "head" . }}
+<body>
+  {{ partial "header" . }}
+  <div class="wrap_content">
+    {{ partial "nav" .}}
+    <main>
+      <article>
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+      </article>
+      <nav class="toc">
+      </nav>
+    </main>
+  </div>
+  {{ partial "footer" . }}
+</body>
+</html>
