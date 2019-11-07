@@ -1,0 +1,25 @@
+{{ partial "head" . }}
+<body>
+    {{ partial "header" . }}
+    <div class="wrap_content">
+        <main>
+            <link href="//c.marsflag.com/mf/mfx/css/mfx-serp.css" rel="stylesheet" charset="UTF-8">
+            <div class="mf_finder_container">
+                <mf-search-box ajax-url="//mf2ap001.marsflag.com/cybozu__support__help/x_search.x"
+                ></mf-search-box>
+                <mf-zubaken></mf-zubaken>
+                <mf-search-results></mf-search-results>
+            </div>
+        </main>
+    </div>
+    {{ partial "footer" . }}
+    <script type="text/javascript">
+        !function(){
+            var G = GALFSRAM = window.GALFSRAM || {}
+            G.mfx = G.mfx || {}
+            G.mfx.router_mode = 'history'
+        }();
+    </script>
+    <script src="//c.marsflag.com/mf/mfx/1.0/js/mfx-serp.js" charset="UTF-8"></script>
+</body>
+</html>

@@ -2,3 +2,7 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "My New Hugo Site"
 theme = "mytheme"
+
+[params]
+logo = "/img/logo_s.svg"
+search_placeholder = "検索キーワードを入力"

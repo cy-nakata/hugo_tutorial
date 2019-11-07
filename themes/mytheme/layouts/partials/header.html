@@ -1,10 +1,18 @@
 <header class="header">
   <div class="wrap_header">
     <nav class="logo">
-    ロゴ
+      {{ with .Site.Params.logo }}
+        <a class="logo_link" href="/">
+          <img class="logo_img" src="{{ . }}">
+        </a>
+      {{ end }}
     </nav>
     <nav class="search_box">
-    検索ボックス
+      <form class="search_form" action="{{ "/search_result" | relURL }}">
+      <input type="text" name="q" aria-label="search" class="search_input" {{ with .Site.Params.search_placeholder }}placeholder="{{ . }}"{{ end }}>
+      <input type="hidden" name="ct" value="kintone ヘルプ全体">
+      <button type="submit" class="search_submit"><img src="/img/search-solid.svg" alt="search"></button> 
+      </form>
     </nav>
   </div>
 </header>
